@@ -212,7 +212,7 @@
     
     if (operation == DiscuzAuthentecDecode) {
         
-        NSData* temp = [self encodeBase64StringToData:[self cutString:source :ckey_length]];
+        NSData* temp = [self decodeBase64StringToData:[self cutString:source :ckey_length]];
         
         temp = [self RC4:temp :crykeyData];
         
